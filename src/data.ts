@@ -138,7 +138,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "Daydev Academy",
     date: "Nov 2025",
     icon: "📜",
-    proofUrl: "/port/Datascience.pdf",
+    proofUrl: "https://drive.google.com/file/d/1CsYAJOW-PPSz5zzlPolS5Xa3wgDBMAaN/view?usp=drive_link",
     badgeUrl: "/png_port/Datascience-1.png",
   },
   {
@@ -147,7 +147,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "Huawei ASEAN Academy",
     date: "Aug 2023",
     icon: "🎓",
-    proofUrl: "/port/HCIA-AI%20V3.0%20Certificated.png",
+    proofUrl: "https://drive.google.com/file/d/11XsoXzirMT3aShjjdt8uTBPDAvwQPlAj/view?usp=sharing",
     badgeUrl: "/png_port/HCIA-AI%20V3.0%20Certificated.png",
   },
   {
@@ -156,7 +156,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "borntodev Academy",
     date: "Jun 2025",
     icon: "🧩",
-    proofUrl: "/port/borntodev-academy_GitHub%20for%20Developer%20_certificate.png",
+    proofUrl: "https://drive.google.com/file/d/1bJq5jtHOu8_dvd-T0puakjFF8I_zrG8M/view?usp=sharing",
     badgeUrl: "/png_port/borntodev-academy_GitHub%20for%20Developer%20_certificate.png",
   },
   {
@@ -165,7 +165,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "Kaggle / Course",
     date: "Dec 2025",
     icon: "🐍",
-    proofUrl: "/port/Nawattakorn%20Namburin%20-%20Python.png",
+    proofUrl: "https://drive.google.com/file/d/1jBHW_Z8ps_ooJg__oMzF7wUrxqoArGyW/view?usp=sharing",
     badgeUrl: "/png_port/Nawattakorn%20Namburin%20-%20Python.png",
   },
   {
@@ -174,7 +174,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "IT Specialist",
     date: "Dec 2025",
     icon: "📊",
-    proofUrl: "/port/%5BCertificate%5D_DataAnalytics.pdf",
+    proofUrl: "https://drive.google.com/file/d/1NLx31EZVvL8HG-2sju175U7xaVgD17zQ/view?usp=sharing",
     badgeUrl: "/png_port/%5BCertificate%5D_DataAnalytics-1.png",
   },
 
@@ -184,7 +184,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "AIRA & AIFUL Hackathon",
     date: "Oct 2024",
     icon: "🏅",
-    proofUrl: "/port/Cert-API.pdf",
+    proofUrl: "https://drive.google.com/file/d/1zDWArh9QKeletK19Fr-TqnL3IIFccOpZ/view?usp=sharing",
     badgeUrl: "/png_port/Cert-API-10.png",
   },
 
@@ -194,7 +194,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "AIRA & AIFUL Hackathon",
     date: "Oct 2024",
     icon: "🏅",
-    proofUrl: "/port/Cert-DataCollect-10.pdf",
+    proofUrl: "https://drive.google.com/file/d/1mcoNJLrh9xHzS9evXQmkPtDho4dR2Ef3/view?usp=sharing",
     badgeUrl: "/png_port/Cert-DATA Collect-10.png",
   },
 
@@ -204,7 +204,7 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
     issuer: "AIRA & AIFUL Hackathon",
     date: "Oct 2024",
     icon: "🏅",
-    proofUrl: "/port/Cert-Lowcode.pdf",
+    proofUrl: "https://drive.google.com/file/d/1F6jLCR15Pj1exKcXDQoI2M_Uj_gye-jX/view?usp=sharing",
     badgeUrl: "/png_port/Cert-Lowcode-10.png",
   },
 ];
