@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=VT323&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: "VT323", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  --mc-base: #c6c6c6;
+  --mc-high: #ffffff;
+  --mc-low: #555555;
+  --mc-dark: #8b8b8b;
+  --mc-darker: #373737;
+  --mc-text: #3f3f3f;
+  --mc-text-title: #4b4b4b;
+  --mc-text-white: #ffffff;
+  --mc-bg-1: #1a1a1a;
+  --mc-bg-2: #141414;
+  --mc-hover-bg: #6da2fc;
+  --mc-hover-top: #a4c8fa;
+  --mc-hover-bot: #3c5d8f;
+  --mc-active-bg: #a0a0a0;
+  --mc-tooltip-bg: #100010;
+  --mc-tooltip-border: #200050;
+  --mc-tooltip-shadow: #37007a;
+  --mc-outline: #000000;
+}
+
+.theme-night {
+  /* Deepslate / Netherrack / Dark theme */
+  --mc-base: #36393f;
+  --mc-high: #555a63;
+  --mc-low: #1e1f23;
+  --mc-dark: #292b30;
+  --mc-darker: #141518;
+  --mc-text: #eeeeee;
+  --mc-text-title: #ffffff;
+  --mc-text-white: #ffffff;
+  --mc-bg-1: #0d0f12;
+  --mc-bg-2: #090a0c;
+  --mc-hover-bg: #824bb8; 
+  --mc-hover-top: #b070ed;
+  --mc-hover-bot: #48236e;
+  --mc-active-bg: #292b30;
+  --mc-tooltip-bg: #1f0b0b;
+  --mc-tooltip-border: #520000;
+  --mc-tooltip-shadow: #a80000;
+  --mc-outline: #000000;
+}
+
+@layer utilities {
+  .font-pixel {
+    font-family: var(--font-pixel);
+  }
+
+  /* Authentic Sandbox UI Colors are now powered by CSS Variables */
+  
+  .mc-panel {
+    background-color: var(--mc-base);
+    border: 4px solid;
+    border-top-color: var(--mc-high);
+    border-left-color: var(--mc-high);
+    border-bottom-color: var(--mc-low);
+    border-right-color: var(--mc-low);
+    box-shadow: 0 0 0 4px var(--mc-outline);
+    color: var(--mc-text-title);
+  }
+
+  .mc-panel-inset {
+    background-color: var(--mc-dark);
+    border: 4px solid;
+    border-top-color: var(--mc-darker);
+    border-left-color: var(--mc-darker);
+    border-bottom-color: var(--mc-high);
+    border-right-color: var(--mc-high);
+    padding: 1rem;
+    color: var(--mc-text);
+  }
+
+  .mc-button {
+    background-color: var(--mc-base);
+    border: 4px solid;
+    border-top-color: var(--mc-high);
+    border-left-color: var(--mc-high);
+    border-bottom-color: var(--mc-low);
+    border-right-color: var(--mc-low);
+    box-shadow: 0 0 0 2px var(--mc-outline);
+    cursor: pointer;
+    transition: background-color 0s;
+    color: var(--mc-text-title);
+  }
+  
+  .mc-button:hover {
+    background-color: var(--mc-hover-bg);
+    border-top-color: var(--mc-hover-top);
+    border-left-color: var(--mc-hover-top);
+    border-bottom-color: var(--mc-hover-bot);
+    border-right-color: var(--mc-hover-bot);
+    color: var(--mc-text-white);
+  }
+  
+  .mc-button:hover .mc-text-title {
+    color: var(--mc-text-white);
+    text-shadow: 2px 2px 0px var(--mc-outline);
+  }
+
+  .mc-button:active, .mc-button-active {
+    border-top-color: var(--mc-low);
+    border-left-color: var(--mc-low);
+    border-bottom-color: var(--mc-high);
+    border-right-color: var(--mc-high);
+    background-color: var(--mc-active-bg);
+  }
+
+  .mc-slot {
+    background-color: var(--mc-dark);
+    border: 4px solid;
+    border-top-color: var(--mc-darker);
+    border-left-color: var(--mc-darker);
+    border-bottom-color: var(--mc-high);
+    border-right-color: var(--mc-high);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,0.2);
+  }
+
+  .mc-slot:hover::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background-color: rgba(255, 255, 255, 0.25);
+    pointer-events: none;
+  }
+
+  .mc-slot-active::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 4px solid var(--mc-high);
+    pointer-events: none;
+  }
+
+  .mc-text-title {
+    color: var(--mc-text-title);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+  }
+
+  .mc-text-white {
+    color: var(--mc-text-white);
+    text-shadow: 2px 2px 0px var(--mc-outline);
+  }
+
+  .mc-bg-stone {
+    background-color: transparent;
+    background-image: none;
+  }
+
+  .mc-tooltip {
+    background-color: var(--mc-tooltip-bg);
+    border: 2px solid var(--mc-tooltip-border);
+    box-shadow: inset 0px 0px 0px 2px var(--mc-tooltip-shadow), 2px 2px 8px rgba(0,0,0,0.5);
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+    text-shadow: 2px 2px 0px var(--mc-outline);
+  }
+
+  /* Custom blocky scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 20px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--mc-bg-1);
+    border: 2px solid var(--mc-outline);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--mc-base);
+    border: 4px solid;
+    border-top-color: var(--mc-high);
+    border-left-color: var(--mc-high);
+    border-bottom-color: var(--mc-low);
+    border-right-color: var(--mc-low);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--mc-hover-bg);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:active {
+    background: var(--mc-active-bg);
+    border-top-color: var(--mc-low);
+    border-left-color: var(--mc-low);
+    border-bottom-color: var(--mc-high);
+    border-right-color: var(--mc-high);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
