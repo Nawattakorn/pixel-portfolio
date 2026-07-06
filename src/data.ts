@@ -77,9 +77,117 @@ export const MOCK_PROJECTS = [
     ],
     tech: ["LINE API", "n8n", "OpenRouter LLM", "Google Sheets", "Docker", "Nginx"],
     thumbnail: "/project/ChatBuddy-Icon.png",
-    images: ["/project/ChatBuddy-BlockDiagram.png", "/project/ChatBuddy-Usecase.png", "/project/ChatBuddy-Dashboard-Demo.png"],
+    images: [
+      "/project/ChatBuddy-BlockDiagram.png",
+      "/project/ChatBuddy-Usecase.png",
+      "/project/ChatBuddy-Dashboard-Demo.png",
+      "/project/Chatbuddy-n8n-workflow.png"
+    ],
     links: [
       { label: "GitHub Repo", url: "https://github.com/GiftNuttamon/ProjectAI-Business/tree/main" }
+    ]
+  },
+  {
+    id: "proj-5",
+    title: "ChatX Backend",
+    category: "Backend & API",
+    description: "Secure, high-performance API backend for an omni-channel customer support platform.",
+    fullDescription:
+      "ChatX is an omni-channel platform designed to consolidate customer chats from multiple services (like LINE and Facebook Messenger) into a unified inbox. Developed as part of my Software Developer internship at Cyberpay Technology Co., Ltd., I designed and implemented secure RESTful APIs, optimized SQL queries for dashboard reporting, and created reliable third-party webhook integrations.",
+    features: [
+      "Authentication: Developed secure Login APIs using JWT and database-level encryption",
+      "Real-time Dashboard: Built reporting API endpoints leveraging complex SQL queries and indexing",
+      "Webhook Integration: Created LINE Webhook handlers with signature validation to guarantee payload integrity",
+      "Database Architecture: Structured scalable tables and migrations on PostgreSQL"
+    ],
+    tech: ["NestJS", "PostgreSQL", "TypeScript", "JWT", "LINE API", "Docker"],
+    thumbnail: "/project/ChatX.png",
+    images: [
+      "/project/ChatX.png",
+      "/project/chatx/UILogin.png",
+      "/project/chatx/Dashboard.png",
+      "/project/chatx/ChatTransferUI.png",
+      "/project/chatx/LineWebHook.png",
+      "/project/chatx/EmailResetPass.png",
+      "/project/chatx/ForgotPassUI.png",
+      "/project/chatx/SetPasswordUI.png"
+    ],
+    links: []
+  },
+  {
+    id: "proj-6",
+    title: "SmartFactoryTwinOps",
+    category: "Industrial IoT",
+    description: "A real-time Digital Twin operations platform monitoring factory efficiency (OEE) and device telemetry.",
+    fullDescription:
+      "SmartFactoryTwinOps is an industrial dashboard combining Digital Twin principles and IoT operation controls. It visualizes live device telemetry, aggregates operational metrics (OEE, uptime, anomalies), and provides simulated controls for manufacturing environments to enable predictive maintenance and efficient factory management.",
+    features: [
+      "OEE Analytics: Visualizes Overall Equipment Effectiveness metrics with charts",
+      "Sensor Telemetry: Real-time sensor reading displays using live data feeds",
+      "Anomaly Detection: Automated threshold monitoring for preventive machine alerts",
+      "Interactive Twin Control: Toggle simulated operational variables and monitor state feedback"
+    ],
+    tech: ["React", "TypeScript", "Node.js", "Tailwind CSS", "IoT", "MQTT"],
+    thumbnail: "/project/smartfactory/dashboard.png",
+    images: [
+      "/project/smartfactory/dashboard.png",
+      "/project/smartfactory/Digital-Twin.png",
+      "/project/smartfactory/Agents.png",
+      "/project/smartfactory/Recommendations.png",
+      "/project/smartfactory/smartfactory-architecture.png"
+    ],
+    links: [
+      { label: "GitHub Repo", url: "https://github.com/nathirad/smart-factory-TwinOpsAI-Demo" },
+      { label: "Live Demo", url: "https://smart-factory-alpha.vercel.app/" }
+    ]
+  },
+  {
+    id: "proj-7",
+    title: "JobFlow AI",
+    category: "AI & Automation",
+    description: "An AI-powered job application tracker integrating a Chrome Extension, Google Sheets, and Gemini AI.",
+    fullDescription:
+      "JobFlow AI is an automated suite designed to simplify job application tracking. It features a custom Chrome Extension that extracts job details from popular platforms (like LinkedIn, JobsDB, JobThai) and logs them directly to a Google Sheet via a Google Apps Script web app backend. It also utilizes Gemini AI to draft customized cover letters matching job descriptions directly inside the sheet.",
+    features: [
+      "Chrome Extension: Extracts job information (title, company, salary, description) directly from job board web pages",
+      "Google Apps Script Backend: Automatically parses incoming payloads and appends them to Google Sheets",
+      "Cozy Cream Design: Custom styled Google Sheets layout for clean visual application tracking",
+      "Gemini AI Integration: Generates customized cover letters customized to specific job descriptions with one click"
+    ],
+    tech: ["Chrome Extension", "Google Apps Script", "Gemini API", "JavaScript"],
+    thumbnail: "/project/jobflow/Jobflow-Thumnail.png",
+    images: [
+      "/project/jobflow/Jobflow-Thumnail.png",
+      "/project/jobflow/Jobflow-Preview-1.png",
+      "/project/jobflow/Jobflow-Preview-2.png",
+      "/project/jobflow/Jobflow-Preview-3.png"
+    ],
+    links: [
+      { label: "Google Sheets Template", url: "https://docs.google.com/spreadsheets/d/1uTRsEehhDBqwlQvSfTwpb1O7BjqO6qdSrvQxO2VwD6U/copy" }
+    ]
+  },
+  {
+    id: "proj-8",
+    title: "Homework Checker OCR",
+    category: "Computer Vision & AI",
+    description: "An automated grading application using OpenCV and OCR engines to grade worksheets.",
+    fullDescription:
+      "Homework Checker OCR is a Python-based Flask web application designed to automate student homework grading. It takes scanned or photographed worksheet images, detects answer box contours using OpenCV, extracts written answers using three selectable OCR engines (Template Matching for digits, Tesseract for text, and TrOCR for handwriting), and compares them against user-defined answer keys.",
+    features: [
+      "Multi-Engine OCR: Custom Template Matching (digits), Tesseract (text), and TrOCR (handwritten AI model)",
+      "Computer Vision Pipeline: Box detection, Otsu thresholding, line morphology, and character segmentation via OpenCV",
+      "Batch Comparison: Side-by-side engine benchmarking interface to compare accuracy, latency, and success rates",
+      "Interactive Web Portal: Flask-based UI supporting single-engine runs, parameter adjustments, and grading dashboards"
+    ],
+    tech: ["Python", "Flask", "OpenCV", "PyTorch", "TrOCR", "Tesseract"],
+    thumbnail: "/project/homeworkchecker/homeworkchecker-demo.png",
+    images: [
+      "/project/homeworkchecker/homeworkchecker-demo.png",
+      "/project/homeworkchecker/Homeworkchecker-workflow.png",
+      "/project/homeworkchecker/preprocessing_steps.png"
+    ],
+    links: [
+      { label: "GitHub Repo", url: "https://github.com/Nawattakorn/DIP-Project-HomeworkChecker-OCR" }
     ]
   }
 ];
@@ -210,8 +318,22 @@ export const MOCK_CERTIFICATIONS: ProofItem[] = [
 ];
 
 export const MOCK_ACTIVITIES: ProofItem[] = [
- 
-
+  {
+    id: "act-1",
+    name: "AIRA & AIFUL Hackathon (Group Activity)",
+    issuer: "AIRA & AIFUL",
+    date: "Oct 2024",
+    icon: "🏆",
+    badgeUrl: "/project/AIRA-AiFulHackathon-Activity.jpg"
+  },
+  {
+    id: "act-2",
+    name: "Microsoft AI Hackathon (Group Activity)",
+    issuer: "Microsoft & AIAT",
+    date: "Feb 2026",
+    icon: "💻",
+    badgeUrl: "/project/AI-Engineering-Skills-and-Hackathon-for-Employment-2026-Group-Activity.jpg"
+  }
 ];
 
 export const MOCK_TECH_STACK = [

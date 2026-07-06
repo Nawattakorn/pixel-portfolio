@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=VT323&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-pixel: "VT323", monospace;
   --font-sans: "Inter", sans-serif;
@@ -25,6 +27,20 @@
   --mc-tooltip-border: #200050;
   --mc-tooltip-shadow: #37007a;
   --mc-outline: #000000;
+
+  /* Modern Theme Light variables */
+  --modern-bg: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  --modern-card-bg: rgba(255, 255, 255, 0.75);
+  --modern-card-border: rgba(148, 163, 184, 0.12);
+  --modern-text: #0f172a;
+  --modern-text-muted: #475569;
+  --modern-primary: #4f46e5;
+  --modern-primary-hover: #4338ca;
+  --modern-accent: #db2777;
+  --modern-accent-rgb: 219, 39, 119;
+  --modern-glow: rgba(79, 70, 229, 0.08);
+  --modern-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --modern-shadow-hover: 0 20px 40px -15px rgba(79, 70, 229, 0.15), 0 1px 10px rgba(0, 0, 0, 0.05);
 }
 
 .theme-night {
@@ -47,6 +63,20 @@
   --mc-tooltip-border: #520000;
   --mc-tooltip-shadow: #a80000;
   --mc-outline: #000000;
+
+  /* Modern Theme Dark variables */
+  --modern-bg: radial-gradient(circle at 80% 20%, #1e1b4b 0%, #0f172a 50%, #020617 100%);
+  --modern-card-bg: rgba(15, 23, 42, 0.65);
+  --modern-card-border: rgba(255, 255, 255, 0.05);
+  --modern-text: #f8fafc;
+  --modern-text-muted: #94a3b8;
+  --modern-primary: #818cf8;
+  --modern-primary-hover: #6366f1;
+  --modern-accent: #f472b6;
+  --modern-accent-rgb: 244, 114, 182;
+  --modern-glow: rgba(129, 140, 248, 0.12);
+  --modern-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+  --modern-shadow-hover: 0 20px 40px -15px rgba(129, 140, 248, 0.25), 0 1px 10px rgba(0, 0, 0, 0.15);
 }
 
 @layer utilities {
@@ -199,10 +229,78 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #020617;
   min-height: 100vh;
 }
+
+/* Modern Layout Styles */
+.modern-gradient-bg {
+  background: var(--modern-bg);
+}
+
+.modern-card {
+  background: var(--modern-card-bg);
+  border: 1px solid var(--modern-card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--modern-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--modern-shadow-hover);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.modern-text-gradient {
+  background: linear-gradient(135deg, var(--modern-primary) 0%, var(--modern-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modern-btn {
+  background: var(--modern-primary);
+  color: #ffffff !important;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.25);
+}
+
+.modern-btn:hover {
+  background: var(--modern-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.35);
+}
+
+.modern-btn-outline {
+  background: transparent;
+  color: var(--modern-text) !important;
+  border: 1px solid var(--modern-card-border);
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.modern-btn-outline:hover {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: var(--modern-primary);
+}
+
+/* Modern scrollbar */
+.modern-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.modern-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modern-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+.modern-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
+
